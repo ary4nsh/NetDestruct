@@ -20,7 +20,7 @@ const (
 	SNMPVersion2c = 1
 )
 
-// Setter sends an SNMP SET request (SNMPv1 or SNMPv2c), snmpset-style.
+// Setter sends an SNMP SET request (SNMPv1 or SNMPv2c).
 type Setter struct {
 	Target    string
 	Port      int
