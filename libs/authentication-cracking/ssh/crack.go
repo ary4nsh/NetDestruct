@@ -20,7 +20,7 @@ import (
 
 const tag = "\x1b[33m[SSH]\x1b[0m"
 
-// Cracker extracts ssh2john-style hashes from an encrypted SSH private key file
+// Cracker extracts hashes from an encrypted SSH private key file
 // and optionally runs a dictionary attack.
 //
 //	--ssh --file id_rsa
