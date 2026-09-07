@@ -377,7 +377,8 @@ Implementation: `libs/dos/vtpcrash/`
 
 ## VTP / DTP Output
 
-VTP DoS modes (delete-all, delete-vlan, Catalyst zero day) print received protocol data in Wireshark-style decode.
+VTP DoS modes (delete-all, delete-vlan, Catalyst zero day) print received protocol data 
+decode.
 
 ### Output colors
 
@@ -388,7 +389,7 @@ VTP DoS modes (delete-all, delete-vlan, Catalyst zero day) print received protoc
 
 ### Printed decode
 
-Wireshark-style decode for every received VTP frame:
+Decode for every received VTP frame:
 
 - Frame summary line with byte count and interface name
 - IEEE 802.3 Ethernet and Logical-Link Control headers
