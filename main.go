@@ -1,4 +1,4 @@
-﻿package main
+package main
 
 import (
 	"errors"
@@ -73,8 +73,7 @@ import (
 	"netdestruct/libs/vlan-bypassing/dot1qdouble"
 	"netdestruct/libs/vlan-bypassing/dtpinject"
 
-	"github.com/spf13/cobra"
-	"github.com/spf13/pflag"
+	"netdestruct/libs/cli"
 )
 
 type Flags struct {
@@ -514,11 +513,11 @@ func parseMemcachedSet(setFlag, valueFlag string) (key, value string, err error)
 func main() {
 	var flags Flags
 
-	var rootCmd = &cobra.Command{
+	var rootCmd = &cli.Command{
 		Use:   "NetDestruct",
 		Short: "Network reconnaissance/attack toolkit",
 		Long:  "NetDestruct — network reconnaissance/attack toolkit",
-		Run: func(cmd *cobra.Command, args []string) {
+		Run: func(cmd *cli.Command, args []string) {
 			if !anyFlagSet(flags) {
 				cmd.Help()
 				return
@@ -3107,14 +3106,14 @@ func main() {
 	rootCmd.Flags().BoolVar(&flags.doType8, "type8", false, "Crack Cisco Type 8 (enable secret 8 / PBKDF2-SHA256) hashes — requires wordlist")
 	rootCmd.Flags().BoolVar(&flags.doType9, "type9", false, "Crack Cisco Type 9 (enable secret 9 / scrypt N=16384 r=1 p=1) hashes — requires wordlist")
 
-	rootCmd.SetUsageFunc(func(cmd *cobra.Command) error {
+	rootCmd.SetUsageFunc(func(cmd *cli.Command) error {
 		fmt.Println("Usage:")
 		fmt.Println("  NetDestruct [flags]")
 		fmt.Println()
 
 		groups := make(map[string][]string)
 
-		cmd.Flags().VisitAll(func(f *pflag.Flag) {
+		cmd.Flags().VisitAll(func(f *cli.Flag) {
 			group := flagGroups[f.Name]
 			if group == "" {
 				group = "Other"
