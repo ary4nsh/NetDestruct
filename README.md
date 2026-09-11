@@ -60,7 +60,7 @@ sudo ./NetDestruct --llmnr --nbt-ns -I eth0
 ./NetDestruct --ospf --capture ospf.pcap --crack --wordlist rockyou.txt
 ./NetDestruct --cisco-pass --type7 --hash 0822455D0A16
 
-# DoS (lab only)
+# DoS
 sudo ./NetDestruct --mac-flood -I eth0 --flood-rate 1000
 ```
 
