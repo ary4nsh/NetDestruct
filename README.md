@@ -1,12 +1,12 @@
-<p align="center">
-  <img src="NetDestruct-Logo.png" alt="NetDestruct" width="420"/>
-</p>
-
 # NetDestruct
 
 Network reconnaissance and attack toolkit.
 
 NetDestruct covers Layer-2/3 protocol abuse, service enumeration, offline hash cracking, MitM, and DoS. Most L2 modules need Linux with root (or `CAP_NET_RAW`). Many TCP/UDP service modules work without root.
+
+<p align="center">
+  <img src="NetDestruct-Logo.png" alt="NetDestruct" width="420"/>
+</p>
 
 ---
 
